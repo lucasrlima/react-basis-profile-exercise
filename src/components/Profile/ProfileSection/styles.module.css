@@ -1,0 +1,8 @@
+.wrapper {
+    background-color: rgb(255, 255, 255);
+    border-top: solid 1px rgb(66, 140, 209);
+    padding: 1rem 2.5rem 0;
+    width: 25vw;
+    min-width: 242px;
+}
+
