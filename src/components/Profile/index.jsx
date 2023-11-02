@@ -5,14 +5,17 @@ import SocialButton from "../SocialButton"
 import ProfileSection from "./ProfileSection"
 import ProfileTitle from "./ProfileTitle"
 import FollowButton from "../FollowButton"
+import { useState } from "react"
 
 export default
 
 function Profile({avatar, name, bio, phone, email, githubUrl, linkedinUrl, instagramUrl}) {
 
+    const [followText, setFollowText] = useState("I will Follow")
+
     function handleClick(event) {
-        console.log(event)
         alert("Você está seguindo!");
+        setFollowText("Following")
     }
 
     return (
@@ -23,8 +26,9 @@ function Profile({avatar, name, bio, phone, email, githubUrl, linkedinUrl, insta
             <ProfileTitle>
                 {name}
                 <br/>
-                <FollowButton onClick={handleClick}>
-                    
+                <FollowButton onClick={handleClick}
+                 followText={followText}
+                >    
                 </FollowButton>
             </ProfileTitle> 
             
