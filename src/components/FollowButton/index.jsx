@@ -1,11 +1,12 @@
 import styles from "./styles.module.css"
 
 export default
-
-function FollowButton(props) {
-    return(
-        <button className={styles.FollowButton}
-        {...props}
-        >Follow</button>
-    )
-}
+// eslint-disable-next-line react/prop-types
+function FollowButton({ followText, ...props }) {
+    return (
+      <button className={styles.FollowButton} 
+        {...props}>
+        {followText}
+      </button>
+    );
+  }
